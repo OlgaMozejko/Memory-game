@@ -396,6 +396,9 @@ body {
 
   .timer {
     left: 5%;
+    width: 20vw;
+    height: 15vh;
+    top: 80%;
   }
 
 }
