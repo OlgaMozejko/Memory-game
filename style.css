@@ -217,7 +217,7 @@ body {
 
 
 .card {
-  width: 70%;
+  width: 65%;
   height: 60%;
   margin: 5px auto;
   position: relative;
@@ -369,3 +369,63 @@ body {
   top: 60%;
 }
 
+@media only screen and (max-width: 1000px) {
+
+  .start-box {
+    margin-top: 35vh;
+  }
+
+  .card-wrap {
+    width: 80vw;
+    height: 70vh;
+  }
+
+  .congrats-popup {
+    height: 30%;
+    width: 30%;
+  }
+
+  .thumbs-up {
+    margin-top: -100%;
+  }
+
+  .large {
+    width: 30vw;
+    height: 35vh;
+  }
+
+}
+
+@media only screen and (max-width: 400px) {
+
+  .start-box {
+    margin-top: 30vh;
+  }
+
+
+  .card-wrap {
+    width: 90vw;
+    height: 90vh;
+  }
+
+  .card {
+    width: 80%;
+    height: 70%;
+  }
+
+  .congrats-popup {
+    height: 35%;
+    width: 50%;
+  }
+
+  .thumbs-up {
+    margin-top: -120%;
+  }
+
+  .large {
+    font-size: 40px;
+    width: 50vw;
+    top: 65%;
+  }
+
+}
