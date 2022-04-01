@@ -394,6 +394,10 @@ body {
     height: 35vh;
   }
 
+  .timer {
+    left: 5%;
+  }
+
 }
 
 @media only screen and (max-width: 400px) {
@@ -420,6 +424,14 @@ body {
 
   .thumbs-up {
     margin-top: -120%;
+  }
+
+  .timer {
+    left: 5%;
+    top: 80%;
+    width: 30vw;
+    height: 25vh;
+    font-size: 20px;
   }
 
   .large {
