@@ -1,0 +1,371 @@
+
+:root {
+    --background-color: #003461;
+    --text-color: #e6f4f1;
+    --popup-color: #004b7c;
+    --shadow: #DB93F2;
+}
+
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Amatic SC', cursive;
+    font-size: 30px;
+    font-weight: 800;
+    background-color: var(--background-color);
+    background-image: url('img/background.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--text-color);
+
+    max-width: 100%;
+    overflow-x: hidden;
+
+}
+
+.page {
+    width: 100vw;
+    height: 100vh;
+}
+
+/*----loader------*/
+
+
+.loader {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--popup-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  flex-direction: column;
+}
+
+.loader p {
+  font-size: 15px;
+}
+
+.loading {
+  width: 15vw;
+  height: 15vh;
+  background-image: url(img/loader.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  animation: rotating 1s linear infinite;
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(-359deg);
+  }
+}
+
+.loaded .loader {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s 1s ease-out;
+}
+
+
+ /*-------styling-----*/
+
+
+.start-inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.attention {
+    fill: var(--text-color);
+    animation: moving 1.5s linear infinite;
+}
+
+.attention2 {
+    fill: var(--text-color);
+    animation-delay: 200ms;
+    animation: moving2 1.5s linear infinite;
+}
+
+
+  @keyframes moving {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: translate(10px, 0px);
+      opacity: 0;
+    }
+  }
+
+  @keyframes moving2 {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: translate(-10px, 0px);
+      opacity: 0;
+    }
+  }
+  
+  
+  
+
+.start-box {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 45vh;
+    width: 100%;
+    text-align: center;
+}
+
+.start-button {
+    font-family: 'Indie Flower', cursive;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: 0.5s ease-in-out;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.start-button:hover {
+    font-size: 60px;
+    font-weight: 800;
+    letter-spacing: 10px;
+    cursor: pointer;
+}
+
+.congrats-text span {
+    font-family: 'Palette Mosaic', cursive;
+}
+
+.ufo {
+    position: absolute;
+    width: 20%;
+    right: 20%;
+    top: 30%;
+    transform: rotate(10deg);
+    animation: spaceship 6s linear infinite;
+}
+
+@keyframes spaceship {
+    0% {
+        transform: translate(0px, 0px) rotate(0deg);  
+    }
+ 
+    25% {
+        transform: translate(0px, 20px) rotate(10deg);
+    }
+ 
+    50% {
+        transform: translate(0px, 40px) rotate(0deg);
+    }
+
+    75% {
+        transform: translate(0px, 20px) rotate(-10deg);
+
+    }
+    100% {
+        transform: translate(0px, 0px) rotate(0deg);
+    }
+
+}
+
+
+.outer-box {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.card-wrap {
+  height: 60vh;
+  width: 50vw;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  column-gap: -10px;
+  row-gap: -10px;
+}
+
+
+.card {
+  width: 70%;
+  height: 60%;
+  margin: 5px auto;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+  transition: transform .5s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.card.flip {
+  transform: rotateY(180deg);
+}
+
+.front,
+.back{
+  width: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.front {
+  transform: rotateY(180deg);
+}
+
+.congrats-pop {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.congrats-popup {
+    z-index: 10;
+    height: 20%;
+    width: 20%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    background-color: var(--popup-color);
+    border-radius: 20px;
+    box-shadow: 10px 10px 0px var(--shadow);
+}
+
+.thumbs-up {
+    z-index: 11;
+    width: 50%;
+    position: absolute;
+    margin-left: 70%;
+    margin-top: -70%;
+    animation: thumbs 2s linear infinite;
+}
+
+@keyframes thumbs {
+    0% {
+        transform: rotate(0deg);
+    }
+    
+    25% {
+        transform: rotate(10deg);
+    }
+
+    50% {
+        transform: rotate(0deg);
+    }
+
+    75% {
+        transform: rotate(-10deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.congrats-text {
+    z-index: 12;
+}
+
+.reset-button {
+    z-index: 12;
+    font-family: 'Indie Flower', cursive;
+    text-decoration: none;
+    border: none;
+    background: none;
+    margin: 0 auto;
+    margin-top: -15px;
+    transition: 0.5s ease-in-out;
+    color: var(--text-color);
+}
+
+.reset-button:hover {
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: 10px;
+    cursor: pointer;
+}
+
+.visible {
+    transform: 2s ease-in;
+    opacity: 1;
+    visibility: visible;
+}
+
+.timer {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  top: 70%;
+  left: 20%;
+  width: 10vw;
+  height: 15vh;
+  z-index: 5;
+  transition: 1s ease-in-out;
+}
+
+.timer-img {
+  width: 90%;
+  transform: rotate(10deg);
+  position: absolute;
+  z-index: 6;
+}
+
+.numbers {
+  z-index: 7;
+  color: var(--background-color);
+}
+
+.large {
+  width: 20vw;
+  height: 25vh;
+  font-size: 60px;
+  top: 60%;
+}
+

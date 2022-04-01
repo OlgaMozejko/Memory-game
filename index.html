@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>✨👽✨</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="out of this world memory game">
+    <meta name="author" content="Olga Mozejko">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Indie+Flower&family=Palette+Mosaic&display=swap" rel="stylesheet">
+</head>
+
+<body onhashchange="pageChange()">
+
+  <div class="loader">
+    <div class="loading"></div>
+    <p>loading...</p>
+  </div>
+
+    <main>
+        <section id="start" class="page"> 
+
+            <img class="ufo" src="img/ufo.png">
+            <div class="start-box">
+                 <p class="congrats-text">Are you ready for <br><span>out of this world</span><br> game?</p>
+                 <div class="start-inner">
+                    <svg class="attention" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"/></svg>
+                    <svg class="attention" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"/></svg>
+                    <a href="#game" class="start-button" onclick="startTimer()">YES!</a>
+                    <svg class="attention2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z"/></svg>
+                    <svg class="attention2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z"/></svg>
+                </div>
+             </div>
+
+        </section>
+
+        
+        <section id="game" class="page">
+
+            <div class="outer-box">
+              <div class="card-wrap">
+              <div class="card" id="angry">
+                <img class="front" src="img/card1.png" alt="angry" />
+                <img class="back" src="img/cardback.png" alt="alien butt" />
+              </div>
+              <div class="card" id="angry">
+                <img class="front" src="img/card1.png" alt="angry" />
+                <img class="back" src="img/cardback.png" alt="alien butt" />
+              </div>
+          
+              <div class="card" id="happy">
+                <img class="front" src="img/card2.png" alt="happy" />
+                <img class="back" src="img/cardback.png" alt="alien butt" />
+              </div>
+              <div class="card" id="happy">
+                <img class="front" src="img/card2.png" alt="happy" />
+                <img class="back" src="img/cardback.png" alt="alien butt" />
+              </div>
+          
+              <div class="card" id="silly">
+                <img class="front" src="img/card3.png" alt="silly" />
+                <img class="back" src="img/cardback.png" alt="alien butt" />
+              </div>
+              <div class="card" id="silly">
+                <img class="front" src="img/card3.png" alt="silly" />
+                <img class="back" src="img/cardback.png" alt="alien butt" />
+              </div>
+          
+              <div class="card" id="awkward">
+                <img class="front" src="img/card4.png" alt="awkward" />
+                <img class="back" src="img/cardback.png" alt="alien butt" />
+              </div>
+              <div class="card" id="awkward">
+                <img class="front" src="img/card4.png" alt="awkward" />
+                <img class="back" src="img/cardback.png" alt="alien butt" />
+              </div>
+          
+              <div class="card" id="dead">
+                <img class="front" src="img/card5.png" alt="dead" />
+                <img class="back" src="img/cardback.png" alt="alien butt" />
+              </div>
+              <div class="card" id="dead">
+                <img class="front" src="img/card5.png" alt="dead" />
+                <img class="back" src="img/cardback.png" alt="alien butt" />
+              </div>
+          
+              <div class="card" id="meh">
+                <img class="front" src="img/card6.png" alt="meh" />
+                <img class="back" src="img/cardback.png" alt="alien butt" />
+              </div>
+              <div class="card" id="meh">
+                <img class="front" src="img/card6.png" alt="meh" />
+                <img class="back" src="img/cardback.png" alt="alien butt" />
+              </div>
+            </div>    
+
+            <div class="congrats-pop">
+                <div class="congrats-popup">
+                <img src="img/thumbsup.png" class="thumbs-up">
+                <p class="congrats-text">Great Job!<br> You did it!</p>
+                <button class="reset-button" onclick="resetGame()">Again?</button>
+            </div></div>
+
+
+        </div>
+
+        <div class="timer">
+          <img src="img/ufo.png" class="timer-img">
+          <div id="time" class="numbers">00:00</div>
+        </div>
+
+        </section>
+
+
+    </main>
+
+    <script src="app.js"></script>
+    <script src="spa.js"></script>
+</body>
+
+</html>
