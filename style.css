@@ -207,7 +207,7 @@ body {
 }
 
 .card-wrap {
-  height: 60vh;
+  height: 70vh;
   width: 50vw;
   display: grid;
   grid-template-columns: auto auto auto;
@@ -217,8 +217,8 @@ body {
 
 
 .card {
-  width: 65%;
-  height: 60%;
+  width: 60%;
+  height: 55%;
   margin: 5px auto;
   position: relative;
   justify-content: center;
