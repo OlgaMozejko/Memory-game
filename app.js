@@ -123,8 +123,27 @@ function resetCards() {
     });
   };
 
+  let counter = document.getElementById('pairs');
+
   function isItDone() {
+    if (cardPairs.length === 2){
+          counter.innerHTML = '1';
+    }
+    if (cardPairs.length === 4){
+         counter.innerHTML = '2';
+    }
+    if (cardPairs.length === 6){
+      counter.innerHTML = '3';
+    }
+    if (cardPairs.length === 8){
+      counter.innerHTML = '4';
+    }
+    if (cardPairs.length === 10){
+      counter.innerHTML = '5';
+    }
     if (cardPairs.length === 12){
+
+      counter.innerHTML = 'all !';
 
     setTimeout(Congrats, 1200);
 
